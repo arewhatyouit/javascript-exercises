@@ -1,12 +1,12 @@
 const sumAll = function(num1, num2) {
     let array = [];
 
-    if (num1 < 0 | num2 < 0) {
+    if (num1 < 0 || num2 < 0) {
         error = 'ERROR';
         return error;
     }
 
-    else if (!Number.isInteger(num1) | !Number.isInteger(num2)) {
+    else if (!Number.isInteger(num1) || !Number.isInteger(num2)) {
         error = 'ERROR';
         return error;
     }
