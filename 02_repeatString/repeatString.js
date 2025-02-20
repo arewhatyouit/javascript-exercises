@@ -1,15 +1,26 @@
 const repeatString = function(string, num) {
-    let result = ''
+    let result = '';
     
-    for (i = 0; i < num; i++) {
-            result = result + string
-        }
-        return result;
-        }
+    if (num < 0) {
+        return 'ERROR';
+    }
     
-    repeatString('hey', 3)
-    // repeatString('hello', 10)
+    for (let i = 0; i < num; i++) {
+        result += string;
+    }
     
-    // Do not edit below this line
-    module.exports = repeatString;
+    return result;
+}
+
+function randomNum() {
     
+}
+
+console.log(repeatString('hey', 3));
+console.log(repeatString('hello', 10));
+console.log(repeatString('hi', 1));
+console.log(repeatString('bye', 0));
+console.log(repeatString("don't use the built-in repeat method!", 1));
+console.log(repeatString('goodbye', -1));
+
+module.exports = repeatString;
